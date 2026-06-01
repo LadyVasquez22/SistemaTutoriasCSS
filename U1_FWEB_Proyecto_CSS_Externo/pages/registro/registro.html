@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Registro</title>
+<link href="../../img/3339035-business-tools-record_106933.ico" rel="icon"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../../css/general.css"/>
+</head>
+<body>
+<header>
+<h1>REGISTRO DE USUARIO</h1>
+<p>Crea una cuenta para acceder al sistema de tutorías académicas.</p>
+</header>
+<nav>
+<a href="../../index.html">Volver al inicio de sesión</a>
+</nav>
+<main>
+<section>
+<h2>
+                Formulario de registro <i class="fa-regular fa-square-check"></i>
+</h2>
+<form action="../principal/principal.html" method="get">
+<label>Nombres:</label><br/>
+<input name="nombres" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" placeholder="Ingrese sus nombres" required="" title="Solo se permiten letras" type="text"/>
+<br/><br/>
+<label>Apellidos:</label><br/>
+<input name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" placeholder="Ingrese sus apellidos" required="" title="Solo se permiten letras" type="text"/>
+<br/><br/>
+<label>Cédula:</label><br/>
+<input maxlength="10" minlength="10" name="cedula" pattern="[0-9]{10}" placeholder="Ingrese su cédula" required="" title="La cédula debe contener exactamente 10 números" type="text"/>
+<br/><br/>
+<label>Fecha de nacimiento:</label><br/>
+<input name="fechaNacimiento" required="" type="date"/>
+<br/><br/>
+<label>Género:</label><br/>
+<select name="genero" required="">
+<option value=""> Seleccione una opción </option>
+<option value="masculino"> Masculino </option>
+<option value="femenino"> Femenino </option>
+</select>
+<br/><br/>
+<label>Correo electrónico:</label><br/>
+<input name="correo" placeholder="ejemplo@correo.com" required="" type="email"/>
+<br/><br/>
+<label>Contraseña:</label><br/>
+<input maxlength="16" minlength="8" name="contrasena" placeholder="8 a 16 caracteres" required="" type="password"/>
+<br/><br/>
+<button type="submit">
+
+                    Registrarse
+
+                </button>
+</form>
+</section>
+</main>
+<aside>
+<h3>Importante</h3>
+<p>
+            Asegurarse de ingresar correctamente sus datos.
+        </p>
+</aside>
+<footer>
+<p>
+            Desarrollado por Lady Vasquez
+        </p>
+<p>
+            Fundamentos de Sistemas Web - ESPE
+        </p>
+</footer>
+</body>
+</html>
