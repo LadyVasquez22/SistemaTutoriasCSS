@@ -1,0 +1,36 @@
+/* ============================================================
+   BLOQUE 1: PRESENTACIÓN PRINCIPAL
+   Estilos propios de principal.html.
+   ============================================================ */
+
+#presentacion-sistema {
+    border-left: 8px solid #003366;
+    background-color: #f8fbff;
+}
+
+#presentacion-sistema img {
+    display: block;
+    margin: 15px auto;
+    width: 260px;
+}
+
+/* ============================================================
+   BLOQUE 2: SERVICIOS
+   Tarjetas de servicios principales.
+   ============================================================ */
+
+.contenedor-servicios {
+    border-left: 8px solid #2c6fa3;
+}
+
+.servicio {
+    background-color: #eef3f8;
+    border-left: 5px solid #003366;
+    padding: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.servicio:hover {
+    background-color: #d9ecfa;
+}

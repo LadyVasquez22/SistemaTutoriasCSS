@@ -1,0 +1,187 @@
+/* ============================================================
+   BLOQUE 1: FORMULARIO DE TUTORÍAS
+   Estilos propios para solicitar tutorías.
+   ============================================================ */
+
+#solicitud-tutoria {
+    border-left: 8px solid #1f5c2e;
+    background-color: #f7fff4;
+}
+
+.formulario-citas {
+    border: 2px solid #1f5c2e;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.formulario-citas textarea {
+    min-height: 120px;
+    max-width: 100%;
+    resize: vertical;
+}
+
+.formulario-citas input,
+.formulario-citas select,
+.formulario-citas textarea {
+    max-width: 100%;
+}
+
+/* ============================================================
+   BLOQUE 2: BARRAS DE PROGRESO
+   Colores según estado de solicitud.
+   ============================================================ */
+
+.barra-espera {
+    accent-color: #d7a100;
+}
+
+.barra-aceptada {
+    accent-color: #2c6fa3;
+}
+
+.barra-finalizada {
+    accent-color: #1f5c2e;
+}
+
+.barra-espera,
+.barra-aceptada,
+.barra-finalizada {
+    width: 100%;
+    max-width: 300px;
+}
+/* ============================================================
+   BLOQUE 3: TABLA DE TUTORÍAS
+   Estilos específicos de la tabla.
+   ============================================================ */
+
+#tabla-tutorias {
+    border-left: 8px solid #d7a100;
+}
+
+#tabla-tutorias table {
+    table-layout: auto;
+}
+
+#tabla-tutorias progress {
+    width: 80px;
+}
+
+#tabla-tutorias tr:hover {
+    background-color: #eef3f8;
+}
+/* ============================================================
+   BLOQUE 4: AJUSTE VISUAL EN PANTALLAS PEQUEÑAS
+   Evita que la tabla se deforme cuando el ancho es reducido.
+   ============================================================ */
+
+#tabla-tutorias {
+    overflow-x: auto;
+}
+
+#tabla-tutorias table {
+    min-width: 750px;
+}
+
+#tabla-tutorias th,
+#tabla-tutorias td {
+    white-space: normal;
+}
+
+@media (max-width: 700px) {
+    #tabla-tutorias {
+        padding: 10px;
+    }
+
+    #tabla-tutorias h2 {
+        font-size: 24px;
+    }
+
+    #tabla-tutorias table {
+        min-width: 750px;
+    }
+
+    #tabla-tutorias progress {
+        width: 100px;
+    }
+}
+/* ============================================================
+   BLOQUE 5: CONTROL DE DESBORDES
+   Evita que formularios, inputs, textos y tablas se salgan.
+   ============================================================ */
+
+#solicitud-tutoria,
+.formulario-citas,
+#tabla-tutorias {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.formulario-citas input,
+.formulario-citas select,
+.formulario-citas textarea,
+.formulario-citas button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.formulario-citas input[type="radio"],
+.formulario-citas input[type="checkbox"] {
+    width: auto;
+}
+
+.formulario-citas label,
+.formulario-citas p {
+    word-break: break-word;
+}
+
+#tabla-tutorias table {
+    min-width: 700px;
+}
+
+#tabla-tutorias progress {
+    width: 100%;
+    max-width: 120px;
+}
+/* ============================================================
+   BLOQUE 5: RESPONSIVE DE TUTORÍAS
+   Ajusta formulario, progreso y tabla en celular.
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    #solicitud-tutoria {
+        border-left: 6px solid #1f5c2e;
+        padding: 12px;
+    }
+
+    .formulario-citas {
+        padding: 12px;
+    }
+
+    .formulario-citas input,
+    .formulario-citas select,
+    .formulario-citas textarea,
+    .formulario-citas button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .formulario-citas input[type="radio"],
+    .formulario-citas input[type="checkbox"] {
+        width: auto;
+    }
+
+    #tabla-tutorias {
+        overflow-x: auto;
+    }
+
+    #tabla-tutorias table {
+        min-width: 650px;
+    }
+
+    #tabla-tutorias progress {
+        width: 90px;
+    }
+}

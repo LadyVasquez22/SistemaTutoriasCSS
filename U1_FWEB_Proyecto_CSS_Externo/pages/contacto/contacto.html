@@ -4,10 +4,12 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link href="../../img/-contact-phone_90586.ico" rel="icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/general.css" />
+    <link href="../../css/general.css" rel="stylesheet">
+    <link href="../../css/contacto.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,7 +24,7 @@
         <a href="../../index.html">Cerrar sesión</a>
     </nav>
     <main>
-        <section>
+        <section id="datos-contacto" class="datos-contacto">
             <h2>Información de contacto</h2>
             <img alt="Contacto académico" src="../../img/contactoAcademico.jpg" width="300" />
             <p>
@@ -32,7 +34,7 @@
         </section>
         <section>
             <h2>Formulario de contacto</h2>
-            <form>
+            <form class="formulario-contacto">
                 <label>Nombre completo:</label><br />
                 <input maxlength="100" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
                     placeholder="Ingrese su nombre completo" required="" title="Solo se permiten letras" type="text" />
@@ -51,10 +53,9 @@
                 <label>Mensaje:</label><br />
                 <textarea maxlength="300" name="mensaje" placeholder="Ingrese su mensaje" required=""></textarea>
                 <br /><br />
-                <button type="submit">
+                <button class="btn-enviar" type="submit">
                     Enviar mensaje
                 </button>
-            </form>
         </section>
         <article>
             <h2>Horario de atención</h2>

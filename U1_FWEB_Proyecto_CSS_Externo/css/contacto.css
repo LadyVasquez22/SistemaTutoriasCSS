@@ -1,0 +1,46 @@
+/* ============================================================
+   BLOQUE 1: ENCABEZADO DE CONTACTO
+   Estilo propio para contacto.html.
+   ============================================================ */
+
+header {
+    background-color: #003366;
+    color: #fff8e6;
+}
+
+/* ============================================================
+   BLOQUE 2: DATOS DE CONTACTO
+   Estilos para la información inicial.
+   ============================================================ */
+
+#datos-contacto {
+    border-left: 8px solid #d7a100;
+}
+
+.datos-contacto {
+    background-color: #fff8e6;
+}
+
+/* ============================================================
+   BLOQUE 3: FORMULARIO DE CONTACTO
+   Estilo específico del formulario.
+   ============================================================ */
+
+.formulario-contacto {
+    border: 2px solid #d7a100;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.formulario-contacto textarea {
+    min-height: 130px;
+}
+
+.btn-enviar {
+    background-color: #1f5c2e;
+    border-radius: 8px;
+}
+
+.btn-enviar:hover {
+    background-color: #003366;
+}

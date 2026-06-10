@@ -5,9 +5,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Inicio de Sesión</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="img/index_icon-icons.com_72201.ico" rel="icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/general.css" />
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -15,10 +17,10 @@
         <h1>SISTEMA DE TUTORÍAS ACADÉMICAS</h1>
         <p>Ingreso al sistema de gestión de citas académicas.</p>
     </header>
-    <main>
-        <section>
+    <main id="login-principal">
+        <section id="caja-login">
             <h2>Inicio de sesión</h2>
-            <form>
+            <form class="formulario-login">
                 <label>Usuario o correo electrónico:</label><br />
                 <input name="usuario" placeholder="Ingrese su usuario o correo" required="" type="text" />
                 <br /><br />
@@ -27,7 +29,7 @@
                     type="password" />
                 <br /><br />
                 <a href="./pages/principal/principal.html">
-                    <button type="button">
+                    <button class="btn-login" type="button">
                         Iniciar sesión
                     </button>
                 </a>
