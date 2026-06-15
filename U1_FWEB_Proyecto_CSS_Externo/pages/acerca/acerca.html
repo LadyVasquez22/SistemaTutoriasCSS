@@ -17,28 +17,37 @@
         <h1>ACERCA DEL SISTEMA</h1>
         <p>Información general sobre la idea del sitio web.</p>
     </header>
+
     <nav>
-        <a href="../principal/principal.html">Inicio</a> |
-        <a href="../citas/citas.html">Tutorías</a> |
-        <a href="../contacto/contacto.html">Contacto</a> |
+        <a href="../principal/principal.html">Inicio</a>
+        <a href="../citas/citas.html">Tutorías</a>
+        <a href="../contacto/contacto.html">Contacto</a>
         <a href="../../index.html">Cerrar sesión</a>
     </nav>
+
     <main>
         <section id="idea-sitio">
             <h2>Idea del sitio web</h2>
-            <img alt="Docente explicando una tutoría académica" src="../../img/docenteTutoria.jpg" width="350" />
-            <p>
-                La idea del sitio web consiste en crear un sistema básico para gestionar
-                solicitudes de tutorías académicas dentro de una institución educativa.
-                El sistema está dirigido principalmente a estudiantes que necesitan apoyo
-                académico y a docentes que pueden brindar acompañamiento en diferentes materias.
-            </p>
-            <p>
-                En muchas ocasiones, las tutorías se solicitan por mensajes, correos o de forma verbal,
-                lo que puede causar pérdida de información, cruces de horario o falta de seguimiento.
-                Por esta razón, el sitio propone una forma más ordenada de registrar y consultar citas.
-            </p>
+
+            <div class="contenido-acerca">
+                <img alt="Docente explicando una tutoría académica" src="../../img/docenteTutoria.jpg" width="350" />
+
+                <div>
+                    <p>
+                        La idea del sitio web consiste en crear un sistema básico para gestionar
+                        solicitudes de tutorías académicas dentro de una institución educativa.
+                        El sistema está dirigido principalmente a estudiantes que necesitan apoyo
+                        académico y a docentes que pueden brindar acompañamiento en diferentes materias.
+                    </p>
+                    <p>
+                        En muchas ocasiones, las tutorías se solicitan por mensajes, correos o de forma verbal,
+                        lo que puede causar pérdida de información, cruces de horario o falta de seguimiento.
+                        Por esta razón, el sitio propone una forma más ordenada de registrar y consultar citas.
+                    </p>
+                </div>
+            </div>
         </section>
+
         <section id="proposito-sistema">
             <h2>Propósito del sistema</h2>
             <p>
@@ -51,29 +60,37 @@
                 de cómo podría funcionar una aplicación web académica más completa en el futuro.
             </p>
         </section>
-        <details>
-            <summary>Que permite este sistema</summary>
-            <p>
-                Permitir el ingreso y registro simulado de usuarios.
-            </p>
-        </details>
-        <details>
-            <summary>Funcionalidades principales</summary>
-            <p>
-                Permitir a los estudiantes solicitar tutorías académicas indicando docente, fecha, hora, modalidad y
-                motivo.
-                Mostrar un listado de las tutorías solicitadas con su estado (pendiente, confirmada, cancelada).
-            </p>
-        </details>
-        <details>
-            <summary>Características técnicas</summary>
-            <p>
-                El sistema está desarrollado únicamente con HTML, utilizando etiquetas semánticas para organizar el
-                contenido.
-                Se emplean formularios para simular el registro de usuarios y la solicitud de tutorías, aunque no tienen
-                funcionalidad real de backend.
-            </p>
-        </details>
+
+        <section id="detalles-sistema">
+            <h2>Información del sistema</h2>
+
+            <div class="contenedor-detalles">
+                <details>
+                    <summary>Qué permite este sistema</summary>
+                    <p>
+                        Permite el ingreso y registro simulado de usuarios dentro de una plataforma académica.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Funcionalidades principales</summary>
+                    <p>
+                        Permite a los estudiantes solicitar tutorías académicas indicando docente, fecha,
+                        hora, modalidad y motivo. También muestra un listado de tutorías solicitadas
+                        con su estado.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Características técnicas</summary>
+                    <p>
+                        El sistema está desarrollado con HTML y CSS, utilizando etiquetas semánticas,
+                        formularios, tablas, enlaces internos y archivos de estilos separados por página.
+                    </p>
+                </details>
+            </div>
+        </section>
+
         <article class="tarjeta-beneficio">
             <h2>Beneficios de la propuesta</h2>
             <p>
@@ -84,11 +101,15 @@
             </p>
         </article>
     </main>
+
     <aside>
         <h3>Nota</h3>
-        <p>Este sitio es una simulación académica desarrollada con HTML para la asignatura Fundamentos de Sistemas Web.
+        <p>
+            Este sitio es una simulación académica desarrollada con HTML y CSS para la asignatura
+            Fundamentos de Sistemas Web.
         </p>
     </aside>
+
     <footer>
         <p>Desarrollado por Lady Vasquez</p>
         <p>Fundamentos de Sistemas Web - ESPE</p>

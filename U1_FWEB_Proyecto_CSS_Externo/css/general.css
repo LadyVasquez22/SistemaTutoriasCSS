@@ -332,20 +332,76 @@ footer address {
     text-align: center;
 }
 /* ============================================================
-   BLOQUE 11: RESPONSIVE GENERAL
-   Adaptación real para pantallas pequeñas.
+   BLOQUE 11: MAQUETACION GENERAL Y RESPONSIVE
+   Mejora el Box Model, la navegacion con Flexbox y la adaptacion
+   del sitio para pantallas pequenas.
    ============================================================ */
 
+/* ---------- Box Model general ----------
+   Se agregan bordes redondeados y sombra suave para separar
+   visualmente las areas principales del sitio.
+*/
+main {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.08);
+}
+
+section,
+article,
+aside,
+form,
+img {
+    border-radius: 10px;
+}
+
+/* ---------- Separacion visual ----------
+   Mejora el espacio entre secciones para que el contenido
+   no se vea pegado ni en bloques verticales simples.
+*/
+section {
+    margin-bottom: 24px;
+}
+
+button {
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ---------- Menu de navegacion con Flexbox ----------
+   Organiza los enlaces en fila, centrados y con separacion uniforme.
+   flex-wrap permite que los enlaces bajen de linea si no hay espacio.
+*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    display: inline-block;
+    min-width: 120px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+/* ---------- Responsive general ----------
+   Ajustes para celulares y pantallas pequenas.
+*/
 @media (max-width: 700px) {
 
+    /* Reduce el tamano base del texto en pantallas pequenas. */
     body {
         font-size: 14px;
     }
 
+    /* Disminuye el espacio interno del encabezado. */
     header {
         padding: 18px 12px;
     }
 
+    /* Ajusta titulos para evitar desbordes. */
     h1 {
         font-size: 24px;
         line-height: 1.3;
@@ -355,6 +411,7 @@ footer address {
         font-size: 20px;
     }
 
+    /* Hace que el contenido principal ocupe mejor el ancho disponible. */
     main,
     aside {
         width: 94%;
@@ -362,6 +419,7 @@ footer address {
         padding: 14px;
     }
 
+    /* Reduce espacios internos de bloques principales. */
     section,
     article,
     form {
@@ -369,20 +427,24 @@ footer address {
         margin-bottom: 15px;
     }
 
+    /* Convierte el menu Flexbox en una columna vertical. */
     nav {
-        display: flex;
         flex-direction: column;
+        align-items: stretch;
         gap: 8px;
         padding: 12px;
     }
 
+    /* Cada enlace del menu ocupa todo el ancho disponible. */
     nav a {
         display: block;
         width: 100%;
+        min-width: 0;
         margin: 0;
         padding: 10px;
     }
 
+    /* Controla el tamano de imagenes para que no se desborden. */
     img {
         display: block;
         width: 100%;
@@ -390,6 +452,7 @@ footer address {
         margin: 10px auto;
     }
 
+    /* Formularios y botones ocupan todo el ancho en movil. */
     input,
     textarea,
     select,
@@ -398,11 +461,13 @@ footer address {
         max-width: 100%;
     }
 
+    /* Radio buttons y checkboxes conservan su tamano natural. */
     input[type="radio"],
     input[type="checkbox"] {
         width: auto;
     }
 
+    /* Barras de progreso y medidores se ajustan al ancho movil. */
     progress,
     meter {
         width: 100%;

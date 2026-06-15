@@ -1,36 +1,130 @@
 /* ============================================================
-   BLOQUE 1: PRESENTACIÓN PRINCIPAL
-   Estilos propios de principal.html.
+   BLOQUE 1: PRESENTACION PRINCIPAL CON FLEXBOX
+   Organiza la imagen y el texto en una misma fila.
    ============================================================ */
 
 #presentacion-sistema {
+    display: flex;
+    align-items: center;
+    gap: 24px;
     border-left: 8px solid #003366;
     background-color: #f8fbff;
 }
 
 #presentacion-sistema img {
-    display: block;
-    margin: 15px auto;
-    width: 260px;
+    width: 240px;
+    min-width: 180px;
+    margin: 0 auto;
+}
+
+#presentacion-sistema div {
+    flex: 1;
 }
 
 /* ============================================================
-   BLOQUE 2: SERVICIOS
-   Tarjetas de servicios principales.
+   BLOQUE 2: TARJETAS DE SERVICIOS CON FLEXBOX
+   Distribuye las tarjetas en fila y permite que bajen de linea.
    ============================================================ */
 
 .contenedor-servicios {
     border-left: 8px solid #2c6fa3;
 }
 
-.servicio {
-    background-color: #eef3f8;
-    border-left: 5px solid #003366;
-    padding: 10px;
-    margin-bottom: 10px;
-    list-style: none;
+.lista-servicios {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
 }
 
-.servicio:hover {
-    background-color: #d9ecfa;
+.servicio {
+    position: relative;
+    width: 220px;
+    min-height: 145px;
+    list-style: none;
+    background-color: #eef3f8;
+    border: 1px solid #8eb9d9;
+    border-left: 6px solid #003366;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.servicio strong {
+    display: block;
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.servicio span {
+    display: block;
+    font-size: 14px;
+}
+
+/* ============================================================
+   BLOQUE 3: RECURSOS ACADEMICOS CON GRID
+   Crea un mosaico de informacion organizado en filas y columnas.
+   ============================================================ */
+
+#recursos-academicos {
+    border-left: 8px solid #1f5c2e;
+    background-color: #f7fff4;
+}
+
+.grid-recursos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 16px;
+}
+
+.recurso {
+    position: relative;
+    min-height: 150px;
+    padding: 16px;
+    border: 1px solid #b8d8b1;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.recurso h3 {
+    margin-top: 0;
+}
+
+/* ============================================================
+   BLOQUE 4: AVISO IMPORTANTE
+   Diferencia visualmente el articulo informativo.
+   ============================================================ */
+
+.aviso-importante {
+    border-left: 8px solid #d7a100;
+    background-color: #fff8e6;
+}
+
+/* ============================================================
+   BLOQUE 5: RESPONSIVE DE LA PAGINA PRINCIPAL
+   Adapta Flexbox y Grid para tablets y celulares.
+   ============================================================ */
+
+@media (max-width: 850px) {
+    #presentacion-sistema {
+        flex-direction: column;
+    }
+
+    .grid-recursos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .servicio {
+        width: 100%;
+    }
+
+    .grid-recursos {
+        grid-template-columns: 1fr;
+    }
 }

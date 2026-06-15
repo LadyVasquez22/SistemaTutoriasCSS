@@ -26,38 +26,53 @@
                 Formulario de registro <i class="fa-regular fa-square-check"></i>
             </h2>
             <form class="formulario-registro" action="../principal/principal.html" method="get">
-                <label>Nombres:</label><br />
-                <input name="nombres" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" placeholder="Ingrese sus nombres" required=""
-                    title="Solo se permiten letras" type="text" />
-                <br /><br />
-                <label>Apellidos:</label><br />
-                <input name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" placeholder="Ingrese sus apellidos" required=""
-                    title="Solo se permiten letras" type="text" />
-                <br /><br />
-                <label>Cédula:</label><br />
-                <input maxlength="10" minlength="10" name="cedula" pattern="[0-9]{10}" placeholder="Ingrese su cédula"
-                    required="" title="La cédula debe contener exactamente 10 números" type="text" />
-                <br /><br />
-                <label>Fecha de nacimiento:</label><br />
-                <input name="fechaNacimiento" required="" type="date" />
-                <br /><br />
-                <label>Género:</label><br />
-                <select name="genero" required="">
-                    <option value=""> Seleccione una opción </option>
-                    <option value="masculino"> Masculino </option>
-                    <option value="femenino"> Femenino </option>
-                </select>
-                <br /><br />
-                <label>Correo electrónico:</label><br />
-                <input name="correo" placeholder="ejemplo@correo.com" required="" type="email" />
-                <br /><br />
-                <label>Contraseña:</label><br />
-                <input maxlength="16" minlength="8" name="contrasena" placeholder="8 a 16 caracteres" required=""
-                    type="password" />
-                <br /><br />
-                <button class="btn-registro" type="submit">
-                    Registrarse
-                </button>
+                <div>
+                    <label>Nombres:</label>
+                    <input name="nombres" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" placeholder="Ingrese sus nombres" required
+                        title="Solo se permiten letras" type="text" />
+                </div>
+
+                <div>
+                    <label>Apellidos:</label>
+                    <input name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" placeholder="Ingrese sus apellidos"
+                        required title="Solo se permiten letras" type="text" />
+                </div>
+
+                <div>
+                    <label>Cédula:</label>
+                    <input maxlength="10" minlength="10" name="cedula" pattern="[0-9]{10}"
+                        placeholder="Ingrese su cédula" required title="La cédula debe contener exactamente 10 números"
+                        type="text" />
+                </div>
+
+                <div>
+                    <label>Fecha de nacimiento:</label>
+                    <input name="fechaNacimiento" required type="date" />
+                </div>
+
+                <div>
+                    <label>Género:</label>
+                    <select name="genero" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Correo electrónico:</label>
+                    <input name="correo" placeholder="ejemplo@correo.com" required type="email" />
+                </div>
+
+                <div class="campo-completo">
+                    <label>Contraseña:</label>
+                    <input maxlength="16" minlength="8" name="contrasena" placeholder="8 a 16 caracteres" required
+                        type="password" />
+                </div>
+
+                <div class="campo-completo">
+                    <button class="btn-registro" type="submit">Registrarse</button>
+                </div>
             </form>
         </section>
     </main>

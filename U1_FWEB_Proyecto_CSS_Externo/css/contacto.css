@@ -9,12 +9,26 @@ header {
 }
 
 /* ============================================================
-   BLOQUE 2: DATOS DE CONTACTO
-   Estilos para la información inicial.
+   BLOQUE 2: DATOS DE CONTACTO CON FLEXBOX
+   Organiza la imagen y el texto informativo en columnas.
    ============================================================ */
 
 #datos-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
     border-left: 8px solid #d7a100;
+}
+
+#datos-contacto img {
+    width: 260px;
+    max-width: 100%;
+    margin: 0;
+}
+
+#datos-contacto div {
+    flex: 1;
 }
 
 .datos-contacto {
@@ -22,25 +36,77 @@ header {
 }
 
 /* ============================================================
-   BLOQUE 3: FORMULARIO DE CONTACTO
-   Estilo específico del formulario.
+   BLOQUE 3: FORMULARIO DE CONTACTO CON GRID
+   Distribuye los campos del formulario de manera ordenada.
    ============================================================ */
 
 .formulario-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 780px;
+    margin: 10px auto 0;
     border: 2px solid #d7a100;
     border-radius: 10px;
     background-color: #ffffff;
 }
 
+.formulario-contacto div {
+    width: 100%;
+}
+
+.formulario-contacto .campo-completo {
+    grid-column: 1 / -1;
+}
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 .formulario-contacto textarea {
     min-height: 130px;
+    resize: vertical;
 }
 
 .btn-enviar {
+    width: 100%;
     background-color: #1f5c2e;
     border-radius: 8px;
 }
 
 .btn-enviar:hover {
     background-color: #003366;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* ============================================================
+   BLOQUE 4: RESPONSIVE DE CONTACTO
+   En celular muestra los bloques en una sola columna.
+   ============================================================ */
+
+@media (max-width: 700px) {
+    #datos-contacto {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    #datos-contacto img {
+        margin: 0 auto;
+    }
+
+    .formulario-contacto {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+        margin-top: 8px;
+    }
 }

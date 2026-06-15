@@ -8,14 +8,29 @@
     background-color: #f8fbff;
 }
 
-#idea-sitio img {
-    display: block;
-    margin: 15px auto;
+/* ============================================================
+   BLOQUE 2: CONTENIDO ACERCA CON FLEXBOX
+   Organiza la imagen y el texto en columnas.
+   ============================================================ */
+
+.contenido-acerca {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.contenido-acerca img {
     width: 350px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.contenido-acerca div {
+    flex: 1;
 }
 
 /* ============================================================
-   BLOQUE 2: PROPÓSITO DEL SISTEMA
+   BLOQUE 3: PROPÓSITO DEL SISTEMA
    Diferenciación visual de la sección.
    ============================================================ */
 
@@ -25,16 +40,82 @@
 }
 
 /* ============================================================
-   BLOQUE 3: BENEFICIOS
+   BLOQUE 4: DETALLES DEL SISTEMA CON FLEXBOX
+   Presenta los bloques informativos como tarjetas compactas.
+   ============================================================ */
+
+#detalles-sistema {
+    border-left: 8px solid #2c6fa3;
+    background-color: #f8fbff;
+}
+
+.contenedor-detalles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.contenedor-detalles details {
+    width: 280px;
+    min-height: auto;
+    margin: 0;
+    padding: 14px;
+    border: 1px solid #c6d3df;
+    border-left: 6px solid #2c6fa3;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.contenedor-detalles details[open] {
+    min-height: 150px;
+}
+
+.contenedor-detalles summary {
+    cursor: pointer;
+}
+
+.contenedor-detalles details:hover {
+    background-color: #eef3f8;
+}
+/* ============================================================
+   BLOQUE 5: BENEFICIOS
    Estilo mediante clase reutilizable.
    ============================================================ */
 
 .tarjeta-beneficio {
+    position: relative;
     background-color: #fff8e6;
     border-left: 8px solid #d7a100;
     border-radius: 8px;
 }
 
-main details:hover {
-    background-color: #eef3f8;
+/* ============================================================
+   BLOQUE 6: RESPONSIVE DE ACERCA
+   Ajusta la distribución para pantallas pequeñas.
+   ============================================================ */
+
+@media (max-width: 800px) {
+    .contenido-acerca {
+        flex-direction: column;
+    }
+
+    .contenido-acerca img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .contenedor-detalles {
+        gap: 10px;
+    }
+
+    .contenedor-detalles details {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .contenedor-detalles details[open] {
+        min-height: auto;
+    }
 }

@@ -1,10 +1,10 @@
 /* ============================================================
    BLOQUE 1: REGISTRO DE USUARIO
-   Estilos propios de la página registro.
+   Estilos propios de la pagina registro.
    ============================================================ */
 
 #registro-principal {
-    max-width: 700px;
+    max-width: 900px;
     border-radius: 12px;
     border-top: 6px solid #1f5c2e;
 }
@@ -14,10 +14,36 @@
     background-color: #f7fff4;
 }
 
+/* ============================================================
+   BLOQUE 2: FORMULARIO DE REGISTRO CON GRID
+   Organiza los campos en dos columnas.
+   ============================================================ */
+
 .formulario-registro {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 780px;
+    margin: 10px auto 0;
     border: 2px solid #1f5c2e;
     border-radius: 10px;
     background-color: #ffffff;
+}
+
+.formulario-registro div {
+    width: 100%;
+}
+
+.formulario-registro .campo-completo {
+    grid-column: 1 / -1;
+}
+
+.formulario-registro input,
+.formulario-registro select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .formulario-registro input:valid,
@@ -38,4 +64,27 @@
 
 .btn-registro:hover {
     background-color: #003366;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* ============================================================
+   BLOQUE 3: RESPONSIVE DE REGISTRO
+   En celular el formulario se muestra en una sola columna.
+   ============================================================ */
+
+@media (max-width: 700px) {
+    #registro-principal {
+        width: 94%;
+        padding: 14px;
+    }
+
+    .formulario-registro {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+        margin-top: 8px;
+    }
 }
